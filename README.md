@@ -119,8 +119,57 @@ RAG is not just a pattern—it is becoming the foundation for **scalable, produc
 
 ---
 
-## Getting Started
-1. **Install Dependencies**:  
-   Ensure all required libraries are installed. Use the provided `requirements.txt` file:
-   ```bash
-   pip install -r requirements.txt
+## Setup Instructions
+
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Local Models Setup
+```bash
+# Install Ollama
+curl https://ollama.ai/install.sh | sh
+
+# Pull required models
+ollama pull gemma:7b
+ollama pull llama3.2-vision  # for multimodal
+```
+
+### 3. External Services (for Graph RAG)
+```bash
+brew install neo4j
+neo4j start
+```
+
+## Directory Structure
+```
+.
+├── document_store/       # PDF files and images
+├── vector_db/           # FAISS indexes
+├── 1-𝗡𝗮𝗶𝘃𝗲-𝗥𝗔𝗚.py
+├── 2-𝗥𝗲𝘁𝗿𝗶𝗲𝘃𝗲-𝗥𝗲𝗿𝗮𝗻𝗸-𝗥𝗔𝗚.py
+├── 3-𝗠𝘂𝗹𝘁𝗶𝗺𝗼𝗱𝗮𝗹-𝗥𝗔𝗚.py
+├── 4-𝗚𝗿𝗮𝗽𝗵-𝗥𝗔𝗚.py
+├── 6-𝗔𝗴𝗲𝗻𝘁𝗶𝗰-𝗥𝗔𝗚.py
+├── 7-𝗠𝘂𝗹𝘁𝗶-𝗔𝗴𝗲𝗻𝘁-𝗥𝗔𝗚.py
+└── requirements.txt
+```
+
+## Performance Notes
+
+- Naive RAG: Fast but prone to hallucinations
+- Reranker: 2-3x slower but more accurate
+- Graph RAG: Best for relationship queries
+- Multi-Agent: Most flexible but complex setup
+
+## References
+
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
+- [LlamaIndex Documentation](https://docs.llamaindex.ai/)
+- [Neo4j Documentation](https://neo4j.com/docs/)
+- [Ollama GitHub Repository](https://github.com/ollama/ollama)
+
+---
+
+**Note**: This is an educational repository demonstrating RAG patterns. For production use, additional error handling, monitoring, and scaling considerations are needed.
