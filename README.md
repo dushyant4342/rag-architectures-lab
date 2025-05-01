@@ -170,6 +170,3 @@ neo4j start
 - [Neo4j Documentation](https://neo4j.com/docs/)
 - [Ollama GitHub Repository](https://github.com/ollama/ollama)
 
----
-
-**Note**: This is an educational repository demonstrating RAG patterns. For production use, additional error handling, monitoring, and scaling considerations are needed.

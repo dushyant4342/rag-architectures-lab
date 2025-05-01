@@ -1,0 +1,33 @@
+langchain 
+faiss-cpu 
+pypdf 
+sentence-transformers
+langchain-community
+langchain-ollama
+langchain-experimental
+open_clip_torch 
+torch
+spacy
+transformers
+sentencepiece
+numpy <2.0
+neo4j
+langchain_neo4j
+openai
+
+llama-index-embeddings-huggingface
+llama-index 
+llama-index-llms-ollama 
+sentence-transformers
+
+#langchain-neo4j == 0.0.8
+#pip install -U langchain-neo4j
+
+
+
+# One-time
+#brew install neo4j                # or docker run neo4j:latest
+#neo4j start                       # defaults → bolt://localhost:7687, neo4j / password
+#pip install -U langchain langchain-community langchain-ollama \
+#                neo4j spacy transformers sentencepiece
+#python -m spacy download en_core_web_sm
