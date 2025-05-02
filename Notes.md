@@ -35,3 +35,13 @@
 - The foundation for enterprise-grade AI orchestration and multi-modal workflows
 
 𝗥𝗔𝗚 𝗶𝘀𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗮 𝗽𝗮𝘁𝘁𝗲𝗿𝗻 — 𝗶𝘁’𝘀 𝗯𝗲𝗰𝗼𝗺𝗶𝗻𝗴 𝘁𝗵𝗲 𝗳𝗼𝘂𝗻𝗱𝗮𝘁𝗶𝗼𝗻 𝗳𝗼𝗿 𝘀𝗰𝗮𝗹𝗮𝗯𝗹𝗲, 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻-𝗿𝗲𝗮𝗱𝘆 𝗚𝗲𝗻𝗔𝗜. 𝗘𝗮𝗰𝗵 𝗶𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝘀𝘁𝘆𝗹𝗲 𝘀𝗲𝗿𝘃𝗲𝘀 𝗮 𝗱𝗶𝘀𝘁𝗶𝗻𝗰𝘁 𝗽𝘂𝗿𝗽𝗼𝘀𝗲 — 𝗳𝗿𝗼𝗺 𝘀𝗶𝗺𝗽𝗹𝗲 𝗿𝗲𝘁𝗿𝗶𝗲𝘃𝗮𝗹 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀 𝘁𝗼 𝗰𝗼𝗺𝗽𝗹𝗲𝘅, 𝗺𝘂𝗹𝘁𝗶-𝗮𝗴𝗲𝗻𝘁 𝗿𝗲𝗮𝘀𝗼𝗻𝗶𝗻𝗴 𝘀𝘆𝘀𝘁𝗲𝗺𝘀.
+
+
+
+#langchain-neo4j == 0.0.8
+#pip install -U langchain-neo4j
+#brew install neo4j                # or docker run neo4j:latest
+#neo4j start                       # defaults → bolt://localhost:7687, neo4j / password
+#pip install -U langchain langchain-community langchain-ollama \
+#neo4j spacy transformers sentencepiece
+#python -m spacy download en_core_web_sm

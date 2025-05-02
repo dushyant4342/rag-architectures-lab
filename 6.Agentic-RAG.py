@@ -26,10 +26,7 @@ from llama_index.core import (
 # Import Settings for global configuration
 from llama_index.core.settings import Settings
 from llama_index.llms.ollama import Ollama
-# --- Potentially Corrected import path for HuggingFaceEmbedding ---
-# Try importing from the standard location
-# If this fails, you might need to install the integration:
-# pip install llama-index-embeddings-huggingface
+
 try:
     from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 except ImportError:
@@ -47,7 +44,7 @@ from llama_index.core.query_engine import RouterQueryEngine
 ############################################################################
 # Instantiate the Ollama LLM
 # Increased timeout for potentially slower local models
-llm = Ollama(model="gemma:7b", request_timeout=600.0, temperature=0.1, num_predict=256)
+llm = Ollama(model="gemma:7b", request_timeout=6000.0, temperature=0.1, num_predict=256)
 
 # Instantiate the local embedding model
 # Using 'BAAI/bge-small-en-v1.5' as a good default local model
@@ -101,8 +98,6 @@ def build_index(pdf_path: str):
 transformer_pdf_path = "document_store/Attention-Google.pdf"
 deepseek_pdf_path = "document_store/DeepSeek.pdf"
 
-# Build the indexes
-# Add error handling in case files don't exist
 try:
     index_transformer = build_index(transformer_pdf_path)
     index_deepseek    = build_index(deepseek_pdf_path)
@@ -153,7 +148,7 @@ print("Creating Router Query Engine...")
 try:
     router_engine = RouterQueryEngine.from_defaults(
         query_engine_tools=tools,
-        # verbose=True # Uncomment for more detailed logging from the router
+        verbose=True # Uncomment for more detailed logging from the router
     )
     print("Router Query Engine created.")
 except Exception as e:

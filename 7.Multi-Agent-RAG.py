@@ -27,7 +27,7 @@ from llama_index.core.tools import QueryEngineTool, ToolMetadata, FunctionTool
 
 # --- Configuration ---
 OLLAMA_MODEL = "gemma:7b" # Or another model available in your Ollama setup
-OLLAMA_REQUEST_TIMEOUT = 240.0 # Increased timeout for potentially complex agent reasoning
+OLLAMA_REQUEST_TIMEOUT = 640.0 # Increased timeout for potentially complex agent reasoning
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 DOC_STORE_PATH = "document_store"
 TRANSFORMER_PDF = f"{DOC_STORE_PATH}/Attention-Google.pdf"
